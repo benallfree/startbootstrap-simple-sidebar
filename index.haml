@@ -1,0 +1,51 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width,shrink-to-fit=no,initial-scale=1", :name => "viewport"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+    %title Simple Sidebar - Start Bootstrap Template
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
+    %link{:href => "css/simple-sidebar.css", :rel => "stylesheet"}
+    /[if lt IE 9]
+      <script src=https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js></script>
+      <script src=https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js></script>
+  %body
+    #wrapper
+      #sidebar-wrapper
+        %ul.sidebar-nav
+          %li.sidebar-brand
+            %a{:href => "#"}
+              Start Bootstrap
+          %li
+            %a{:href => "#"} Dashboard
+          %li
+            %a{:href => "#"} Shortcuts
+          %li
+            %a{:href => "#"} Overview
+          %li
+            %a{:href => "#"} Events
+          %li
+            %a{:href => "#"} About
+          %li
+            %a{:href => "#"} Services
+          %li
+            %a{:href => "#"} Contact
+      #page-content-wrapper
+        .container-fluid
+          .row
+            .col-lg-12
+              %h1 Simple Sidebar
+              %p This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.
+              %p
+                Make sure to keep all page content within the
+                = succeed "." do
+                  %code #page-content-wrapper
+              %a#menu-toggle.btn.btn-default{:href => "#menu-toggle"} Toggle Menu
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/bootstrap.min.js"}
+    :javascript
+      $("#menu-toggle").click(function(e){e.preventDefault(),$("#wrapper").toggleClass("toggled")})
